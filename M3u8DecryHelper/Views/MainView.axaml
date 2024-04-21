@@ -1,0 +1,51 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:M3u8DecryHelper.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="350"
+             x:Class="M3u8DecryHelper.Views.MainView"
+             x:DataType="vm:MainViewModel">
+	<Design.DataContext>
+		<!-- This only sets the DataContext for the previewer in an IDE,
+         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+		<vm:MainViewModel />
+	</Design.DataContext>
+
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="auto"></ColumnDefinition>
+			<ColumnDefinition></ColumnDefinition>
+			<ColumnDefinition Width="auto"></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="auto"></RowDefinition>
+			<RowDefinition Height="auto"></RowDefinition>
+			<RowDefinition Height="auto"></RowDefinition>
+			<RowDefinition Height="auto"></RowDefinition>
+			<RowDefinition Height="auto"></RowDefinition>
+			<RowDefinition Height="auto"></RowDefinition>
+			<RowDefinition Height="*"></RowDefinition> 
+		</Grid.RowDefinitions>
+		<TextBlock Grid.ColumnSpan="2" Text="{Binding Tip}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+		<TextBlock Grid.Row="1" Text="m3u8文件:" VerticalAlignment="Center" Margin="2"> </TextBlock>
+		<TextBox IsReadOnly="True" Grid.Row="1" Text="{Binding M3u8FileName}" Grid.Column="1" Margin="2"></TextBox>
+		<Button Grid.Row="1" Grid.Column="2" Content="选择" Margin="2" Command="{Binding Selectm3u8FileCommand}"></Button>
+		
+		
+		<TextBlock Grid.Row="2" Text="key文件:" VerticalAlignment="Center" Margin="2"> </TextBlock>
+		<TextBox IsReadOnly="True" Grid.Row="2" Text="{Binding KeyFile}" Grid.Column="1" Margin="2"></TextBox>
+		<Button Grid.Row="2" Grid.Column="2" Content="选择" Margin="2" Command="{Binding SelectKeyFileCommand}"></Button>
+		
+		<TextBlock Grid.Row="3" Text="加密文件:" VerticalAlignment="Center" Margin="2"></TextBlock>
+		<TextBox  IsReadOnly="True" Grid.Row="3" Grid.Column="1" Text="{Binding EncryVideoFile}" Margin="2"></TextBox>
+		<Button Grid.Row="3" Grid.Column="2" Content="选择" Margin="2" Command="{Binding SelectmEncryFileCommand}"></Button>
+		<TextBlock Grid.Row="4" Text="保存地址:" VerticalAlignment="Center" Margin="2"></TextBlock>
+		<TextBox IsReadOnly="True" Grid.Row="4" Grid.Column="1" Margin="2" Text="{Binding SaveLocation}"></TextBox>
+		<Button Grid.Row="4" Grid.Column="2" Content="选择" Margin="2" Command="{Binding SaveFileCommand}"></Button>
+		<Button  Grid.Row="5" HorizontalAlignment="Center" Grid.ColumnSpan="3"  Background="SkyBlue" Content="解密" Margin="2" Command="{Binding DecrptCommand}"></Button>
+		
+        <TextBlock Grid.Row="6"  Text="日志" >	</TextBlock>
+        <TextBox IsReadOnly="True" Margin="5" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="1" Text="{Binding Logs, Mode=TwoWay }">	</TextBox>
+	</Grid>
+</UserControl>

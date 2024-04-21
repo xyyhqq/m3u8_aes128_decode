@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "M3u8DecryHelper", "M3u8DecryHelper\M3u8DecryHelper.csproj", "{14742363-11A1-4526-829C-00CB4152FBE2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "M3u8DecryHelper.Desktop", "M3u8DecryHelper.Desktop\M3u8DecryHelper.Desktop.csproj", "{FBC6237B-8F00-45DF-947E-2CA0ED4E1A60}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{14742363-11A1-4526-829C-00CB4152FBE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14742363-11A1-4526-829C-00CB4152FBE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14742363-11A1-4526-829C-00CB4152FBE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14742363-11A1-4526-829C-00CB4152FBE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBC6237B-8F00-45DF-947E-2CA0ED4E1A60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBC6237B-8F00-45DF-947E-2CA0ED4E1A60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBC6237B-8F00-45DF-947E-2CA0ED4E1A60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBC6237B-8F00-45DF-947E-2CA0ED4E1A60}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {907F3FDD-0F2C-4021-A9A3-F6DF8EA84023}
+	EndGlobalSection
+EndGlobal
